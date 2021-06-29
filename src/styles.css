@@ -1,0 +1,72 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.btn {
+  background-color: teal;
+  color: white;
+  width: 300px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: rgb(6, 100, 100);
+  color: white;
+  font-weight: 600;
+}
+
+.autocomplete {
+  width: 300px;
+  position: relative;
+  display: inline-block;
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 8px;
+  z-index: 1;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.dropdown-grp {
+  text-align: left;
+  padding: 4px;
+}
+
+.dropdown-content .dropdown-item {
+  text-align: left;
+  padding: 4px;
+  font-weight: 600;
+}
+
+.dropdown-content .dropdown-item:hover {
+  padding: 4px;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  background-color: teal;
+}
+
+.dropdown-content .highlighted-item {
+  padding: 4px;
+  text-align: left;
+  font-weight: 600;
+  background-color: rgb(226, 226, 226);
+}
