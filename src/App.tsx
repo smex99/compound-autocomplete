@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, FormEventHandler } from "react";
+import React, { useEffect, FormEventHandler } from "react";
 import { AutoComplete } from "./AutoComplete";
+
 import "./styles.css";
 
 const options = [
@@ -11,36 +12,32 @@ const options = [
   { id: 6, value: "Brazil" },
   { id: 7, value: "India" },
   { id: 8, value: "United States" },
-  { id: 9, value: "Afghanistan" }
+  { id: 9, value: "Afghanistan" },
 ];
 
 export default function App() {
-  const inputEl = useRef(null);
-
-  useEffect(() => {
-    // inputEl?.current?.focus();
-  }, []);
+  useEffect(() => {}, []);
 
   const handleOnSubmit: FormEventHandler = (e) => {
     e.preventDefault();
-    console.log(inputEl?.current?.value);
   };
 
   return (
     <div className="App">
       <form onSubmit={handleOnSubmit}>
         <AutoComplete
-          ref={inputEl}
           type="search"
           placeholder="Choose a country"
           options={options}
-          // isDisabled={true}
+          empty="No results"
+          isDisabled={false}
         />
 
-        <hr />
-        <button className="btn" type="submit">
-          Submit
-        </button>
+        <div>
+          <button className="btn" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
